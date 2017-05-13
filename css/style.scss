@@ -1,0 +1,410 @@
+/////////////////////////////////////////////////////
+// Sizes:
+// S  - [0, inf.)
+// M  - [768, inf.)
+// L  - [992, inf.)
+// XL - [1200, inf.)
+$screen-s-min: 0px;
+$screen-m-min: 768px;
+$screen-l-min: 992px;
+$screen-xl-min: 1200px;
+/////////////////////////////////////////////////////
+// Colors:
+$bg-color-dark: rgb(7, 7, 7);
+$bg-color-light: rgb(33, 33, 33);
+$bg-color-bright: rgb(219, 219, 219);
+$bg-color-dark-red: rgb(56, 0, 0);
+$bg-mask-dark-full: rgba(0, 0, 0, 1.0);
+$bg-mask-dark-semi: rgba(0, 0, 0, 0.6);
+$bg-mask-dark-dark: rgba(0, 0, 0, 0.8);
+$bg-mask-dark-red: rgba(142, 0, 0, 0.6);
+$font-light-full: rgb(250, 250, 250);
+$font-light-semi: rgb(214, 214, 214);
+$font-light-dark: rgb(160, 160, 160);
+$font-dark-full: rgb(5, 5, 5);
+$font-dark-semi: rgb(33, 33, 33);
+$font-dark-light: rgb(60, 60, 60);
+/////////////////////////////////////////////////////
+// Default values.
+html,
+body {
+    /////////////////////////////////////////////////////
+    // Base values.
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: $bg-color-bright;
+    /////////////////////////////////////////////////////
+    // Text values.
+    font-family: 'Asap', sans-serif;
+    font-size: 18px;
+    color: $font-dark-full;
+    //////////////////////////////
+    // Small:
+    font-size: 18px;
+    //////////////////////////////
+    // Medium:
+    @media screen and (min-width: $screen-m-min) {
+        font-size: 20px;
+    }
+    //////////////////////////////
+    // Large:
+    @media screen and (min-width: $screen-l-min) {
+        font-size: 24px;
+    }
+    //////////////////////////////
+    // Extra Large:
+    @media screen and (min-width: $screen-xl-min) {
+        font-size: 28px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $font-dark-light;
+    -webkit-transition: color 0.8s;
+    transition: color 0.8s;
+    &:link,
+    &:visited,
+    &:active {
+        color: $font-dark-light;
+    }
+    &:hover {
+        color: 0.85 * $font-light-dark;
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Text formatting.
+p {
+    margin: 1em 0em 0em 0em;
+    padding: 0.1em;
+    font-size: 1em;
+    color: $font-light-dark;
+    &:last-child {
+        margin-bottom: 1em;
+    }
+}
+
+.header {
+    margin: 1em 0em 0em 0em;
+    padding: 0.025em 0em;
+    font-size: 4em;
+    color: $font-light-full;
+}
+
+/////////////////////////////////////////////////////
+// Grid layout.
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: stretch;
+    //////////////////////////////
+    // Auto:
+    .col-auto {
+        //vertical-align: top;
+        //display: inline-block;
+        align-self: flex-start;
+        flex-grow: 1;
+    }
+    //////////////////////////////
+    // Small:
+    @for $i from 1 through 12 {
+        //.col-#{$i} {
+        //width: #{percentage($i / 12)};
+        //vertical-align: top;
+        //align-self: stretch;
+        //display: inline-block;
+        //}
+        .col-s-#{$i} {
+            width: #{percentage($i / 12)};
+            //vertical-align: top;
+            //align-self: stretch;
+            //display: inline-block;
+        }
+    }
+    //////////////////////////////
+    // Medium:
+    @media screen and (min-width: $screen-m-min) {
+        @for $i from 1 through 12 {
+            .col-m-#{$i} {
+                width: #{percentage($i / 12)};
+                //vertical-align: top;
+                //align-self: stretch;
+                //display: inline-block;
+            }
+        }
+    }
+    //////////////////////////////
+    // Large:
+    @media screen and (min-width: $screen-l-min) {
+        @for $i from 1 through 12 {
+            .col-l-#{$i} {
+                width: #{percentage($i / 12)};
+                //vertical-align: top;
+                //align-self: stretch;
+                //display: inline-block;
+            }
+        }
+    }
+    //////////////////////////////
+    // Extra Large:
+    @media screen and (min-width: $screen-xl-min) {
+        @for $i from 1 through 12 {
+            .col-xl-#{$i} {
+                width: #{percentage($i / 12)};
+                //vertical-align: top;
+                //align-self: stretch;
+                //display: inline-block;
+            }
+        }
+    }
+    //////////////////////////////
+    // Center class for row:
+    &.center {
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .center {
+        text-align: center;
+    }
+    &.left {
+        justify-content: flex-start;
+    }
+    &.right {
+        justify-content: flex-end;
+    }
+    //&.vertival-center {
+    //    justify-content: space-around;
+    //    align-items: center;
+    //    height: 100%;
+    //}
+}
+
+.panel {
+    display: block;
+    width: 100%;
+    &.full-height {
+        min-height: 100vh;
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Logo panel.
+#panel-logo {
+    #panel-logo-logo {
+        position: relative;
+        display: inline-block;
+        white-space: normal;
+        z-index: 100;
+        margin-top: 40vh;
+        margin-bottom: 15vh;
+        text-align: left;
+        #panel-logo-logo-name {
+            font-family: 'Fira Mono', monospace;
+            display: inline-block;
+            font-size: 4em;
+            margin: 0.1em;
+            color: $font-light-full;
+        }
+        #panel-logo-logo-desc {
+            font-family: 'Fira Mono', monospace;
+            display: inline-block;
+            font-size: 1.8em;
+            margin-left: 1em;
+            padding: 0.1em 0.2em;
+            color: $font-light-semi;
+            background-color: $bg-mask-dark-full;
+        }
+    }
+    #panel-logo-background {
+        height: 0px;
+        width: 100%;
+        display: block;
+        #logo-background {
+            z-index: 20;
+            overflow: hidden;
+            width: 100%;
+            background-color: 0.7 * $bg-color-light;
+            //-webkit-box-shadow: inset 0px 0px 144px 23px rgba(0, 0, 0, 0.29);
+            //-moz-box-shadow: inset 0px 0px 144px 23px rgba(0, 0, 0, 0.29);
+            //box-shadow: inset 0px 0px 144px 23px rgba(0, 0, 0, 0.29);
+            #logo-canvas-background {
+                display: block;
+                position: fixed;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////
+// About panel.
+#panel-about {
+    background-color: $bg-color-light;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    .contact-icons {
+        font-family: 'fontello';
+        margin: 3em 0em;
+        //@media screen and (min-width: $screen-l-min) {
+        //    margin: 8.8em 0em 4em;
+        //}
+        .contact-icon {
+            color: $font-light-semi;
+            display: inline-block;
+            font-size: 4.1em;
+            padding: 0.02em;
+            margin: 0.2em 0em;
+            &:hover {
+                color: 0.85 * $font-light-dark;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Projects panel.
+#panel-projects {
+    background-color: $bg-color-dark;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+/////////////////////////////////////////////////////////
+// Tiles.
+.tiles {
+    margin-top: 0.6em;
+    .tile {
+        margin: 0.8em 0.4em 0em;
+        display: block;
+        position: relative;
+        a {
+            height: 8em;
+            width: 100%;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            .image {
+                height: 100%;
+                width: 150%;
+                left: -25%;
+                position: relative;
+                filter: blur(3px);
+            }
+            .title {
+                display: block;
+                width: calc(100% - 0.8em);
+                font-size: 1.8em;
+                padding: 0.2em 0.4em;
+                background-color: $bg-mask-dark-semi;
+                color: $font-light-dark;
+            }
+        }
+        .description {
+            padding: 0.2em 0.4em;
+            background-color: $bg-color-light;
+            color: $font-light-dark;
+        }
+        &:hover {
+            .title {
+                transition: background-color 0.3s linear, color 0.4s linear;
+                background-color: $bg-mask-dark-dark;
+                color: $font-light-full;
+            }
+            .description {
+                transition: background-color 0.4s linear, color 0.4s linear;
+                background-color: 0.7 * $bg-color-light;
+                color: $font-light-full;
+            }
+            .image {
+                transition: filter 0.4s linear;
+                filter: blur(0px);
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Warp to bottom.
+.warp {
+    &.bottom {
+        position: absolute;
+        bottom: 0em;
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Footer panel.
+#panel-footer {
+    background-color: $bg-color-dark;
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    .footer {
+        color: $font-dark-light;
+        font-size: 0.9em;
+        padding: 5em 0em 3em;
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Testing.
+.test {
+    font-size: 20px;
+    min-height: 10px;
+    background-color: red;
+}
+
+/////////////////////////////////////////////////////////
+// Animation effects.
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    visibility: visible;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        //transform: translateY(70%);
+    }
+    to {
+        opacity: 1;
+        //transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    from {
+        opacity: 0;
+        //-webkit-transform: translateY(70%);
+    }
+    to {
+        opacity: 1;
+        //-webkit-transform: translateY(0%);
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Fading effects.
+.fadeanim {
+    opacity: 0;
+    overflow: hidden;
+    .fadeanim-warp {
+        position: relative;
+        top: 0em;
+    }
+}

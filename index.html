@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Piotr Bartela :: WebDeveloper</title>
+    <meta name="Description" content="Nazwyam się Piotr Bartela, jestem web developerem." />
+
+    <meta name="Author" content="Piotr Bartela - wallet616">
+    <link type="text/plain" rel="author" href="humans.txt" />
+
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/Clock.js"></script>
+    <script type="text/javascript" src="js/Slide.js"></script>
+    <script type="text/javascript" src="js/Tiles.js"></script>
+    <script type="text/javascript" src="js/Background.js"></script>
+    <script type="text/javascript" src="js/Text.js"></script>
+    <script type="text/javascript" src="js/Fading.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontello/fontello.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</header>
+
+<body>
+    <!-- Logo panel -->
+    <div id="panel-logo" class="panel">
+        <!-- Background -->
+        <div id="panel-logo-background">
+            <div class="row center" id="logo-background">
+                <canvas id="logo-canvas-background"></canvas>
+            </div>
+        </div>
+        <!-- ~Background -->
+
+        <!-- Description -->
+        <div class="panel full-height" id="panel-logo-content">
+            <div class="row center">
+                <div class="col-s-12 center">
+                    <span id="panel-logo-logo">
+                    <div id="panel-logo-logo-name" class="slideanim slide">Piotr Bartela</div>
+                    <br>
+                    <div id="panel-logo-logo-desc" class="slideanim slide">Web developer</div>
+                </span>
+                </div>
+            </div>
+        </div>
+        <!-- ~Description -->
+    </div>
+    <!-- ~Logo panel -->
+
+
+
+
+    <!-- About panel -->
+    <div id="panel-about" class="panel">
+        <div class="fadeanim">
+            <div class="row center fadeanim-warp">
+                <!-- About person section -->
+                <div class="col-s-11 col-m-9 col-l-7">
+                    <div id="about-title" class="header">
+                        O mnie
+                    </div>
+                    <div id="about-description">
+                        <p>
+                            Zajmuje się tworzeniem stron internetowych. Powoli uczę się programowania, znam podstawy Javy, Php, nieźle radzę sobię również z C++, całkiem dobrze z C# i Javascriptem.
+                        </p>
+                        <p>
+                            Moja osobowość to ISTJ. Swój czas wolny poświęcam na oglądanie filmów i seriali, granie, czytanie, rysowanie... <br>Niestety większość czasu pochłaniają studia.
+                        </p>
+                    </div>
+                </div>
+                <!-- ~About person section -->
+
+                <!-- Contact section -->
+                <div class="col-s-11 col-m-9 col-l-7">
+                    <!--
+                <div id="contact-title" class="header center">
+                    Kontakt
+                </div>
+                -->
+                    <div id="contact-description">
+                        <div class="row center contact-icons slideanim">
+                            <div class="col-s-6 col-m-3">
+                                <a href="mailto:portfel666@gmail.com" target="blank" class="contact-icon icon-gmail">
+                                </a>
+                            </div>
+                            <div class="col-s-6 col-m-3">
+                                <a href="https://www.facebook.com/piotr.bartela.9/" target="blank" class="contact-icon icon-facebook"></a>
+                            </div>
+                            <div class="col-s-6 col-m-3">
+                                <a href="skype:ochzoey?chat" target="blank" class="contact-icon icon-skype"></a>
+                            </div>
+                            <div class="col-s-6 col-m-3">
+                                <a href="http://steamcommunity.com/id/wallet616/" target="blank" class="contact-icon icon-steam"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ~Contact section -->
+            </div>
+        </div>
+    </div>
+    <!-- ~About panel -->
+
+
+
+
+
+    <!-- Projects panel -->
+    <div id="panel-projects" class="panel">
+        <div class="fadeanim">
+            <div class="fadeanim-warp">
+                <!-- ~Projects section -->
+                <div class="row center">
+                    <div class="col-s-11 col-m-9 col-l-7">
+                        <div id="projects-title" class="header">
+                            Projekty
+                        </div>
+                    </div>
+                </div>
+
+                <div id="projects-description">
+                    <div class="row center tiles">
+
+                        <div class="col-s-6 col-m-4 col-l-3">
+                            <div class="tile">
+                                <a href="projects/wallet616 v3/">
+                                    <img src="projects/wallet616 v3/wallet616 v3.jpg" class="image" />
+                                    <div class="title warp bottom">
+                                        Wizytówka
+                                    </div>
+                                </a>
+                                <div class="description">
+                                    Jedna z pierwszych wersji mojej wizytówki.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-s-6 col-m-4 col-l-3">
+                            <div class="tile">
+                                <a href="projects/wallet616 v4/">
+                                    <img src="projects/wallet616 v4/wallet616 v4.jpg" class="image" />
+                                    <div class="title warp bottom">
+                                        Ostatnia wizytówka
+                                    </div>
+                                </a>
+                                <div class="description">
+                                    Jedna z ostatnich wersji mojej wizytówki. <br>Ładna wizualnie, lecz nie responsywna.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-s-6 col-m-4 col-l-3">
+                            <div class="tile">
+                                <a href="projects/YaboiMatoi - prototype/">
+                                    <img src="projects/YaboiMatoi - prototype/YaboiMatoi - prototype.jpg" class="image" />
+                                    <div class="title warp bottom">
+                                        YaboiMatoi - prototype
+                                    </div>
+                                </a>
+                                <div class="description">
+                                    Strona pozwalająca na wrzucanie i odtwarzanie muzyki - wraz z jej opisem i obrazkiem.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-s-6 col-m-4 col-l-3">
+                            <div class="tile">
+                                <a href="projects/wScroll/">
+                                    <img src="projects/wScroll/wScroll.jpg" class="image" />
+                                    <div class="title warp bottom">
+                                        wScroll
+                                    </div>
+                                </a>
+                                <div class="description">
+                                    Prosty, customowy suwak dla dowolnego elementu strony.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-s-6 col-m-4 col-l-3">
+                            <div class="tile">
+                                <a href="projects/files v2/">
+                                    <img src="projects/files v2/files v2.jpg" class="image" />
+                                    <div class="title warp bottom">
+                                        Explorer polików
+                                    </div>
+                                </a>
+                                <div class="description">
+                                    Prosty, system do przechowywania plików, z panelem logowania sie, i systemem poziomów uprawnień. <br>Pin to 1359.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- ~About person section -->
+            </div>
+        </div>
+    </div>
+    <!-- ~Projects panel -->
+
+
+
+
+
+    <!-- Footer panel -->
+    <div id="panel-footer" class="panel">
+        <div class="row">
+            <div class="col-s-11 footer center">
+                Author Piotr Bartela
+            </div>
+        </div>
+    </div>
+    <!-- ~Footer panel -->
+</body>
+
+</html>
