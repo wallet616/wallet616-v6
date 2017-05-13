@@ -284,7 +284,7 @@ p {
         margin: 0.8em 0.4em 0em;
         display: block;
         position: relative;
-        a {
+        >a {
             height: 8em;
             width: 100%;
             display: block;
@@ -315,16 +315,19 @@ p {
             .title {
                 transition: background-color 0.3s linear, color 0.4s linear;
                 background-color: $bg-mask-dark-dark;
-                color: $font-light-full;
+                color: $font-light-semi;
             }
             .description {
                 transition: background-color 0.4s linear, color 0.4s linear;
                 background-color: 0.7 * $bg-color-light;
-                color: $font-light-full;
+                color: $font-light-semi;
             }
             .image {
                 transition: filter 0.4s linear;
                 filter: blur(0px);
+            }
+            .github-link {
+                color: $font-light-full;
             }
         }
     }
@@ -351,6 +354,24 @@ p {
         color: $font-dark-light;
         font-size: 0.9em;
         padding: 5em 0em 3em;
+    }
+}
+
+/////////////////////////////////////////////////////////
+// Github.
+a.github-link {
+    display: block;
+    height: auto;
+    color: $font-light-semi;
+    font-size: 0.9em;
+    margin-bottom: 0.4em;
+    &::before {
+        content: "Github: \A";
+        white-space: pre;
+    }
+    &:hover {
+        text-shadow: 1px 1px 9px rgba(150, 150, 150, 1);
+        color: $font-light-full;
     }
 }
 

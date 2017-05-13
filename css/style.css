@@ -235,19 +235,19 @@ p {
     margin: 0.8em 0.4em 0em;
     display: block;
     position: relative; }
-    .tiles .tile a {
+    .tiles .tile > a {
       height: 8em;
       width: 100%;
       display: block;
       position: relative;
       overflow: hidden; }
-      .tiles .tile a .image {
+      .tiles .tile > a .image {
         height: 100%;
         width: 150%;
         left: -25%;
         position: relative;
         filter: blur(3px); }
-      .tiles .tile a .title {
+      .tiles .tile > a .title {
         display: block;
         width: calc(100% - 0.8em);
         font-size: 1.8em;
@@ -261,14 +261,16 @@ p {
     .tiles .tile:hover .title {
       transition: background-color 0.3s linear, color 0.4s linear;
       background-color: rgba(0, 0, 0, 0.8);
-      color: #fafafa; }
+      color: #d6d6d6; }
     .tiles .tile:hover .description {
       transition: background-color 0.4s linear, color 0.4s linear;
       background-color: #171717;
-      color: #fafafa; }
+      color: #d6d6d6; }
     .tiles .tile:hover .image {
       transition: filter 0.4s linear;
       filter: blur(0px); }
+    .tiles .tile:hover .github-link {
+      color: #fafafa; }
 
 .warp.bottom {
   position: absolute;
@@ -284,6 +286,19 @@ p {
     color: #3c3c3c;
     font-size: 0.9em;
     padding: 5em 0em 3em; }
+
+a.github-link {
+  display: block;
+  height: auto;
+  color: #d6d6d6;
+  font-size: 0.9em;
+  margin-bottom: 0.4em; }
+  a.github-link::before {
+    content: "Github: \A";
+    white-space: pre; }
+  a.github-link:hover {
+    text-shadow: 1px 1px 9px #969696;
+    color: #fafafa; }
 
 .test {
   font-size: 20px;
