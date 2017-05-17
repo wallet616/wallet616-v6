@@ -39,6 +39,11 @@ p {
   p:last-child {
     margin-bottom: 1em; }
 
+b {
+  font-weight: normal;
+  text-decoration: none;
+  color: #d6d6d6; }
+
 .header {
   margin: 1em 0em 0em 0em;
   padding: 0.025em 0em;

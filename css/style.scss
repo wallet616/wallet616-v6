@@ -86,6 +86,12 @@ p {
     }
 }
 
+b {
+    font-weight: normal;
+    text-decoration: none;
+    color: $font-light-semi;
+}
+
 .header {
     margin: 1em 0em 0em 0em;
     padding: 0.025em 0em;
