@@ -302,34 +302,34 @@ b {
                 left: -25%;
                 position: relative;
                 filter: blur(3px);
+                transition: filter 0.4s;
             }
             .title {
                 display: block;
                 width: calc(100% - 0.8em);
                 font-size: 1.8em;
                 padding: 0.2em 0.4em;
+                transition: background-color 0.3s linear, color 0.4s linear;
                 background-color: $bg-mask-dark-semi;
                 color: $font-light-dark;
             }
         }
         .description {
             padding: 0.2em 0.4em;
+            transition: background-color 0.4s linear, color 0.4s linear;
             background-color: $bg-color-light;
             color: $font-light-dark;
         }
         &:hover {
             .title {
-                transition: background-color 0.3s linear, color 0.4s linear;
                 background-color: $bg-mask-dark-dark;
                 color: $font-light-semi;
             }
             .description {
-                transition: background-color 0.4s linear, color 0.4s linear;
                 background-color: 0.7 * $bg-color-light;
                 color: $font-light-semi;
             }
             .image {
-                transition: filter 0.4s linear;
                 filter: blur(0px);
             }
             .github-link {
